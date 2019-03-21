@@ -1,0 +1,9 @@
+'DAH.Site:Document.News':
+  superTypes:
+    'DAH.Site:Document.GuidePage': true
+  ui:
+    label: News
+    icon: icon-newspaper-o
+    position: 300
+  
+    

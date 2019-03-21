@@ -1,0 +1,9 @@
+prototype(DAH.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) {
+    content = ''
+
+    renderer = afx`
+        <DAH.Site:Component.Header />
+        {props.content}
+        <DAH.Site:Component.Footer />
+    `
+}

@@ -1,0 +1,91 @@
+
+Neos:
+  Flow:
+    mvc:
+      routes:
+        'Neos.Neos':
+          variables:
+            # We prefer URLs without the ".html" suffix
+            defaultUriSuffix: ''
+    error:
+      exceptionHandler:
+        renderingGroups:
+          notFoundExceptions:
+            options:
+              variables:
+                path: '404' # skip suffix in notfound as well
+  Neos:
+    eventLog:
+      enabled: true
+      navigateComponent:
+        nodeTree:
+          loadingDepth: 1
+        structureTree:
+          loadingDepth: 2
+    userInterface:
+      navigateComponent:
+        nodeTree:
+          loadingDepth: 1
+        structureTree:
+          loadingDepth: 2
+    fusion:
+      autoInclude:
+        DAH.Site: true
+    # nodeTypes:
+    #   groups:
+    #     contentBlocks:
+    #       position: 110
+    #       label: 'Content Blocks'
+    Ui:
+      frontendConfiguration:
+        defaultInlineEditor: 'ckeditor5'
+        hotkeys: ~
+
+
+Flowpack:
+  NodeGenerator:
+    generator:
+      'DAH.Site:Document.Page':
+        class: 'Flowpack\NodeGenerator\Generator\Document\PageGeneratorImplementation'
+      'DAH.Site:Document.News':
+        class: 'Flowpack\NodeGenerator\Generator\Document\PageGeneratorImplementation'
+      'DAH.Site:Document.EbsCase':
+        class: 'Flowpack\NodeGenerator\Generator\Document\PageGeneratorImplementation'
+      'DAH.Site:Document.Judgment':
+        class: 'Flowpack\NodeGenerator\Generator\Document\PageGeneratorImplementation'
+      'DAH.Site:Content.Text':
+        class: 'Flowpack\NodeGenerator\Generator\Content\TextGeneratorImplementation'
+
+    preset:
+      # Basic website, with a multiple level page tree
+      dah-small:
+        depth: 3
+        nodeByLevel: 25
+        contentNodeByDocument: 2
+
+        documentNodeType: [ 'DAH.Site:Document.Page' ]
+        #documentNodeType: [ 'DAH.Site:Document.News' ]
+        #documentNodeType: [ 'DAH.Site:Document.EbsCase' ]
+        #documentNodeType: [ 'DAH.Site:Document.Judgment' ]
+        
+        contentNodeType: [ 'DAH.Site:Content.Text']
+        # Randomness of the number of nodes generated from 0 to 100
+        randomness: 50
+
+      dah-medium:
+        depth: 1
+        nodeByLevel: 100
+        contentNodeByDocument: 2
+        documentNodeType: [ 'Neos.NodeTypes:Page' ]
+        contentNodeType: [ 'Neos.NodeTypes:Text']
+        # Randomness of the number of nodes generated from 0 to 100
+        randomness: 0
+
+      dah-big:
+        depth: 1
+        nodeByLevel: 500
+        contentNodeByDocument: 2
+        documentNodeType: [ 'Neos.NodeTypes:Page' ]
+        contentNodeType: [ 'Neos.NodeTypes:Text']
+        # Randomness of the number of nodes generated from 0 to 100
+        randomness: 0

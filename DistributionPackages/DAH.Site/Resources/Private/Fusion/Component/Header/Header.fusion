@@ -1,0 +1,12 @@
+prototype(DAH.Site:Component.Header) < prototype(Neos.Fusion:Component) {
+    homeLink = Neos.Neos:NodeUri {
+        node = ${site}
+    }
+
+    renderer = afx`
+        <header class="main-header">
+            <a class="logo" href={props.homeLink}>deutsche-anwaltshotline.de</a>
+            <DAH.Site:Component.Navigation startingPoint={site} />
+        </header>
+    `
+}

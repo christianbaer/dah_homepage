@@ -1,0 +1,9 @@
+'DAH.Site:Document.EbsCase':
+  superTypes:
+    'DAH.Site:Document.AbstractPage': true
+  ui:
+    label: EBS-Fall
+    icon: icon-envelope-o
+    position: 500
+  
+    

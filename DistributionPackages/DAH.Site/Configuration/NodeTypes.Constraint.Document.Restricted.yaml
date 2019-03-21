@@ -1,0 +1,24 @@
+##
+# Adding this as superType will prevent inserting this page type below normal pages
+#
+# [Youtube Tutorial explaining constraints](https://www.youtube.com/watch?v=ZCRYsYvxXFI&t=247s)
+#
+# Example:
+# Let's say you have a have a news overview of news pages below. To force
+# news pages to be created only directly below:
+#
+# 'DAH.Site:Document.NewsOverview':
+#   superTypes:
+#     'DAH.Site:Document.AbstractPage': true
+#   constraints:
+#     nodeTypes:
+#       'DAH.Site:Document.Restricted': false
+#
+# 'DAH.Site:Content.News':
+#   superTypes:
+#     'DAH.Site:Document.AbstractPage': true
+#     'DAH.Site:Constraint.Document.Restricted': true
+#
+##
+'DAH.Site:Constraint.Document.Restricted':
+  abstract: true

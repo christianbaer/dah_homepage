@@ -1,0 +1,10 @@
+'DAH.Site:Document.GuidePage':
+  abstract: true
+  superTypes:
+    'DAH.Site:Document.AbstractPage': true
+  ui:
+    label: Ratgeber-Seite
+    icon: icon-file-o
+    position: 200
+  
+    

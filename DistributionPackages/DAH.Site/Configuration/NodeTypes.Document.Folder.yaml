@@ -1,0 +1,9 @@
+'DAH.Site:Document.Folder':
+  superTypes:
+    'DAH.Site:Document.AbstractPage': true
+  ui:
+    label: Ordner
+    icon: icon-folder
+    position: 600
+  
+    

@@ -1,0 +1,7 @@
+'DAH.Site:Document.Page':
+  superTypes:
+    'DAH.Site:Document.AbstractPage': true
+  ui:
+    label: i18n
+    icon: icon-file-o
+    position: 100

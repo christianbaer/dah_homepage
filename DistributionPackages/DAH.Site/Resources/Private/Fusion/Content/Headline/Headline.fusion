@@ -1,0 +1,9 @@
+prototype(DAH.Site:Content.Headline) < prototype(Neos.Neos:ContentComponent) {
+    title = Neos.Neos:Editable {
+        property = 'title'
+    }
+
+    renderer = afx`
+        <h1>{props.title}</h1>
+    `
+}

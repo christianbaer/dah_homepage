@@ -1,0 +1,3 @@
+prototype(DAH.Site:Document.GuidePage) < prototype(DAH.Site:Document.Page) {
+
+}

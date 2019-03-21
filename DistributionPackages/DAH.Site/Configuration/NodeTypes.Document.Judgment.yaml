@@ -1,0 +1,9 @@
+'DAH.Site:Document.Judgment':
+  superTypes:
+    'DAH.Site:Document.GuidePage': true
+  ui:
+    label: Urteil
+    icon: icon-gavel
+    position: 400
+  
+    
